@@ -1,364 +1,277 @@
-<!--
-  | Website designed by JstnLT (https://jstnlt.my.id)
-  | This project is open source: https://github.com/JastinXyz/discord-bot-landing-page-web
--->
-
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>David Assistant - Bot for Discord</title>
-    <link rel="stylesheet" href="assets/css/bulma.min.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/tippy.js@6/animations/scale.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+<html lang="en">
 
-    <script src="assets/js/jquery-3.6.0.js"></script>
-  </head>
-  <body>
-    <!-- Back To Top Start -->
-    <a id="backtotop" data-tippy-content="Back To Top.">
-      <i class="fa-solid fa-angle-up has-text-white fa-2xl mt-5"></i>
-    </a>
-    <!-- Back To Top End -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FideliaBot - Bot for Discord</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="shortcut icon" type="image/icon" href="./img/favicon.ico"/>
+</head>
 
-    <!-- Navbar Start -->
-    <nav
-      class="navbar is-fixed-top"
-      role="navigation"
-      aria-label="main navigation"
-    >
-      <div class="navbar-brand mt-2 mb-2">
-        <a class="navbar-item" href="#">
-          <strong>David Assistant</strong>
+<body>
 
-          <!-- or if you want to use image -->
-          <!-- <img
-            src="image link or path"
-            width="112"
-            height="28"
-          /> -->
-        </a>
-
-        <a
-          role="button"
-          class="navbar-burger has-text-white"
-          data-target="navMenu"
-          aria-label="menu"
-          aria-expanded="false"
-        >
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-
-      <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-          <a href="#" class="navbar-item is-tab">
-            Home
-          </a>
-
-          <a href="#features" class="navbar-item is-tab">
-            Features
-          </a>
-
-          <a href="#stats" class="navbar-item is-tab">
-            Stats
-          </a>
-
-          <a href="#" class="navbar-item is-tab">
-            Docs
-          </a>
-        </div>
-
-          <a href="https://github.com/DavidGlitch04" class="navbar-item is-tab" target="_blank">
-            <i class="fa-brands fa-github"></i>
-          </a>
-
-          <div class="navbar-item">
-            <div class="buttons">
-              <a href="https://discord.com/login" class="button is-blurple">
-                <strong
-                  ><i class="fa-solid fa-right-to-bracket mr-2"></i>
-                  Login</strong
-                >
-              </a>
+    <!-- navbar -->
+    <header>
+        <h1 class="logo">Fidelia Bot</h1>
+        <nav>
+            <ul class="nav-area top-nav">
+                <li><a href="#top">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#commands">Commands</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#support">Support</a></li>
+                <li><a href="https://discord.gg/aAYyfrUj">Discord</a></li>
+            </ul>
+        </nav>
+        <a href="https://discord.com/oauth2/authorize?client_id=989434882231001119&scope=bot&permissions=1103203788912" class="btn-area">Invite</a>
+    </header>
+    <!-- navbar end -->
+    <!-- home -->
+    <div class="wrapper">
+        <div class="home" id="home">
+            <div class="home-text">
+                <h1 id="botname">Fidelia Bot Dashboard</h1>
+                <h3 style="margin-left: 0;">Minecraft Developers' Discord Bot</h3>
+                <p class="bot-description">The features of this bot make it easy for Minecraft developers to find information, etc!</p>
+                <a href="https://discord.com/oauth2/authorize?client_id=989434882231001119&scope=bot&permissions=1103203788912" class="home-btn">Add to discord</a>
             </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <!-- Navbar End -->
-
-    <!-- Hero Section Start -->
-    <section class="hero bg-base is-fullheight">
-      <div class="hero-body">
-        <div class="">
-          <div class="columns">
-            <div class="column mr-6 mt-12" data-aos="fade-up">
-              <p class="title has-text-white has-text-weight-bold">
-                David Assistant Dashboard
-              </p>
-              <p class="subtitle has-text-grey-light is-size-6 mt-3">
-                Bot for PMMP Developer Created by DavidGlitch04 and in development, Please contribute ideas about the feature via email: nguyenhieucoder47@gmail.com
-              </p>
-              <div class="buttons">
-                <a href="https://discord.com/oauth2/authorize?client_id=989434882231001119&scope=bot&permissions=1144384577" class="button is-info">
-                  <strong>Add To Discord</strong>
-                </a>
-
-                <!-- <a href="#" class="button is-primary is-outlined">
-                  <strong><i class="fa-solid fa-crown"></i> Premium</strong>
-                </a> -->
-              </div>
+            <div class="home-img">
+                <img src="./img/BotLogo.gif"
+                    alt="">
             </div>
-            <div class="column mt-6" data-aos="fade-left">
-              <img
-                class="image has-image-centered vert-move mt-4"
-                src="assets/img/relaunch_day.svg"
-                alt="hero image"
-                style="width: 20rem;"
-              />
+        </div>
+    </div>
+    <!-- home end -->
+    <!-- features -->
+    <div class="features">
+        <div class="curve">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill-opacity="1" id="features"
+                    d="M0,128L48,149.3C96,171,192,213,288,229.3C384,245,480,235,576,202.7C672,171,768,117,864,96C960,75,1056,85,1152,106.7C1248,128,1344,160,1392,176L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                </path>
+            </svg>
+        </div>
+        <div class="wrapper reveal">
+            <div class="title">
+                <div class="th1">
+                    <h1>What we make the best</h1>
+                </div>
+                <center>
+                    <div class="thr">
+                        <hr>
+                    </div>
+                </center>
             </div>
-          </div>
+            <!-- feature start -->
+            <div class="features-grid">
+                <div class="feature feature1">
+                    <i class="fas fa-clipboard-list"></i>
+                    <h4>Notifications</h4>
+                    <p>Whether people buy, gift or redeem cards within your stream, it will show up on Discord!</p>
+
+                </div>
+                <!-- feature end -->
+                <!-- feature start -->
+                <div class="feature feature2">
+                    <i class="fas fa-server"></i>
+                    <h4>Easy To Use</h4>
+                    <p>Our commands are very intuitive and easy to understand. Even I can understand them, whoever I am...</p>
+
+                </div>
+                <!-- feature end -->
+                <!-- feature start -->
+                <div class="feature feature3">
+                    <i class="fab fa-angellist"></i>
+                    <h4>Constantly Updated</h4>
+                    <p>Fidelia is almost always updated with the newest features so you'll never miss out!</p>
+                </div>
+                <!-- feature end -->
+            </div>
         </div>
-      </div>
-      <div class="has-text-centered" data-tippy-content="Scroll Down">
-        <a href="#features"
-          ><i
-            class="fa-solid fa-circle-chevron-down fa-lg vert-move2 has-text-white"
-          ></i
-        ></a>
-      </div>
-    </section>
-    <!-- Hero Section End -->
-
-    <!-- Hero Waves Start -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path
-        fill="#1a2634"
-        fill-opacity="1"
-        d="M0,288L24,261.3C48,235,96,181,144,154.7C192,128,240,128,288,149.3C336,171,384,213,432,202.7C480,192,528,128,576,133.3C624,139,672,213,720,213.3C768,213,816,139,864,101.3C912,64,960,64,1008,106.7C1056,149,1104,235,1152,240C1200,245,1248,171,1296,144C1344,117,1392,139,1416,149.3L1440,160L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z"
-      ></path>
-    </svg>
-    <!-- Hero Waves End -->
-
-    <!-- Features Section Start -->
-    <section id="features" class="section mt-6">
-      <div class="has-text-centered">
-        <h1 class="title lined">Features</h1>
-        <div class="line line-center blurple"></div>
-      </div>
-
-      <!-- single feature start (Left) -->
-      <div class="single-feature">
-        <div class="shape-right" data-aos="fade-up-left">
-          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <path
-              fill="#9AAAE3"
-              d="M42.7,-62.9C50.9,-52.8,50.1,-34.4,51.7,-19.2C53.4,-4,57.4,8,56.6,20.8C55.8,33.7,50.1,47.4,39.9,53.8C29.6,60.1,14.8,59.1,0.4,58.5C-14,58,-28,57.9,-38,51.5C-48.1,45,-54.3,32.3,-61.3,18.1C-68.4,4,-76.4,-11.7,-71.9,-22.7C-67.4,-33.6,-50.4,-39.8,-36.3,-47.9C-22.2,-56.1,-11.1,-66.3,3.1,-70.5C17.2,-74.7,34.5,-72.9,42.7,-62.9Z"
-              transform="translate(100 100)"
-            />
-          </svg>
+        <div class="curved">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill-opacity="1" id="commands"
+                    d="M0,224L48,229.3C96,235,192,245,288,218.7C384,192,480,128,576,133.3C672,139,768,213,864,229.3C960,245,1056,203,1152,186.7C1248,171,1344,181,1392,186.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                </path>
+            </svg>
         </div>
-
-        <div class="columns mt-6">
-          <div class="column mr-6">
-            <h4 class="title">Poggit Collector <span class="blurple">#1</span></h4>
-            <p class="subtitle mt-3">
-              David Assistant is combined with the command to get information
-              of the plugin that wants to get information. The bot's information
-              is collected from the official website.
-            </p>
-          </div>
-          <div class="column" data-aos="fade-left">
-            <img
-              class="image has-image-centered"
-              src="assets/img/features_overview.svg"
-              alt="feature1 img"
-              style="width: 20rem;"
-            />
-          </div>
+    </div>
+    <!-- features end -->
+    <!-- commands -->
+    <div class="wrapper reveal">
+        <div class="title">
+            <div class="th1">
+                <h1>All Commands</h1>
+            </div>
+            <center>
+                <div class="thr">
+                    <hr>
+                </div>
+            </center>
         </div>
-      </div>
-      <!-- single feature end (Left) -->
-
-      <!-- single feature start (Right) -->
-      <div class="single-feature">
-        <div class="shape-left" data-aos="fade-up-right">
-          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <path
-              fill="#9AAAE3"
-              d="M54.2,-67.2C69.4,-63.5,80.4,-46.6,84.6,-28.7C88.7,-10.8,86,8.1,76.8,21.4C67.6,34.7,51.9,42.3,38.1,50.3C24.2,58.3,12.1,66.7,-2.8,70.5C-17.7,74.3,-35.3,73.6,-45.6,64.5C-55.9,55.3,-58.8,37.7,-63.3,21.2C-67.7,4.7,-73.7,-10.6,-71.8,-25.4C-69.8,-40.2,-59.9,-54.5,-46.6,-58.9C-33.3,-63.2,-16.7,-57.6,1.4,-59.6C19.5,-61.5,39,-71,54.2,-67.2Z"
-              transform="translate(100 100)"
-            />
-          </svg>
+        <!-- Command Category -->
+        <nav>
+            <div class=" categorys">
+                <span class="category active" data-name="all">All</span>
+                <span class="category" data-name="utility">Utility</span>
+                <span class="category" data-name="info">Info</span>
+                <!-- <span class="category" data-name="premium">Premium</span> -->
+            </div>
+        </nav>
+        <!-- Commands -->
+        <div class="commands">
+            <!-- Command Start -->
+            <div class="command" data-name="info">
+                <h2>Ping</h2><span>
+                    <div class="cmdinfo">
+                        <p>Shows bot's ping and uptime status</p>
+                    </div>
+                    <div class="cmdali">
+                        <p>Usage: .ping</p>
+                    </div>
+                </span>
+            </div>
+            <!-- Command End -->
+            <!-- Command Start -->
+            <div class="command" data-name="utility">
+                <h2>Info Poggit</h2><span>
+                    <div class="cmdinfo">
+                        <p>Info poggit plugin</p>
+                    </div>
+                    <div class="cmdali">
+                        <p>Usage: .poggit [Plugin Name]</p>
+                    </div>
+                </span>
+            </div>
+            <!-- Command End -->
+            <!-- Command Start -->
+            <div class="command" data-name="utility">
+                <h2>Info Server</h2><span>
+                    <div class="cmdinfo">
+                        <p>Info about the minecraft server</p>
+                    </div>
+                    <div class="cmdali">
+                        <p>Usage: .serverstatus [ip:port] [bedrock/java]</p>
+                    </div>
+                </span>
+            </div>
+            <!-- Command End -->
+            <!-- Command Start -->
+            <div class="command" data-name="utility">
+                <h2>Server Feature</h2><span>
+                    <div class="cmdinfo">
+                        <p>AntiSpam</p>
+                    </div>
+                    <div class="cmdali">
+                        <p>Usage: .antispam [on/off]</p>
+                    </div>
+                </span>
+            </div>
+            <!-- Command End -->
+            <!-- Command Start -->
+            <div class="command" data-name="utility">
+                <h2>Server Feature</h2><span>
+                    <div class="cmdinfo">
+                        <p>Github Lines</p>
+                    </div>
+                    <div class="cmdali">
+                        <p>Usage: send github link to chat</p>
+                    </div>
+                </span>
+            </div>
+            <!-- Command End -->
         </div>
-
-        <div class="columns mt-6">
-          <div class="column" data-aos="fade-right">
-            <img
-              class="image has-image-centered"
-              src="assets/img/product_literation.svg"
-              alt="feature1 img"
-              style="width: 20rem;"
-            />
-          </div>
-          <div class="column">
-            <h4 class="title">
-              MC Collector <span class="has-text-primary">#2</span>
-            </h4>
-            <p class="subtitle mt-3">
-              In addition to the Poggit Collector feature, David Assistant also 
-              helps users find out information about a certain PE server via ip 
-              and port called MC Collector.
-            </p>
-          </div>
+    </div>
+    <!-- commands end -->
+    <!-- faq -->
+    <div class="faq">
+        <div class="curve">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill-opacity="1" id="faq"
+                    d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                </path>
+            </svg>
         </div>
-      </div>
-      <!-- single feature end (Right) -->
+        <div class="wrapper reveal">
+            <main id="questions" role="main">
+                <div class="title">
+                    <div class="th1">
+                        <h1>Frequently Asked Questions</h1>
+                    </div>
+                    <center>
+                        <div class="thr">
+                            <hr>
+                        </div>
+                    </center>
+                </div>
+                <input type="text" class="live-search-box" placeholder="Search an Answer..." />
+                <!-- question start -->
+                <div class="topic">
+                    <div class="open">
 
-      <!-- single feature start (Left) -->
-      <div class="single-feature">
-        <div class="shape-right" data-aos="fade-up-left">
-          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <path
-              fill="#9AAAE3"
-              d="M42.7,-62.9C50.9,-52.8,50.1,-34.4,51.7,-19.2C53.4,-4,57.4,8,56.6,20.8C55.8,33.7,50.1,47.4,39.9,53.8C29.6,60.1,14.8,59.1,0.4,58.5C-14,58,-28,57.9,-38,51.5C-48.1,45,-54.3,32.3,-61.3,18.1C-68.4,4,-76.4,-11.7,-71.9,-22.7C-67.4,-33.6,-50.4,-39.8,-36.3,-47.9C-22.2,-56.1,-11.1,-66.3,3.1,-70.5C17.2,-74.7,34.5,-72.9,42.7,-62.9Z"
-              transform="translate(100 100)"
-            />
-          </svg>
+                        <h2 class="question">1. What purpose was the bot created for?</h2>
+                        <span class="faq-t"></span>
+                    </div>
+                    <p class="answer">Bot created to help Minecraft developers find information easier.</p>
+                </div>
+                <!-- question end -->
+            </main>
         </div>
-
-        <div class="columns mt-6">
-          <div class="column mr-6">
-            <h4 class="title">
-              Feature <span class="has-text-warning">#3</span>
-            </h4>
-            <p class="subtitle mt-3">
-              Comming Soon...
-            </p>
-          </div>
-          <div class="column" data-aos="fade-left">
-            <img
-              class="image has-image-centered"
-              src="assets/img/feeling_happy.svg"
-              alt="feature1 img"
-              style="width: 20rem;"
-            />
-          </div>
+        <div class="curve">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill-opacity="1"
+                    d="M0,32L48,80C96,128,192,224,288,218.7C384,213,480,107,576,96C672,85,768,171,864,176C960,181,1056,107,1152,64C1248,21,1344,11,1392,5.3L1440,0L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+                </path>
+            </svg>
         </div>
-      </div>
-      <!-- single feature end (Left) -->
-
-      <!-- single feature start (Right) -->
-      <div class="single-feature">
-        <div class="shape-left" data-aos="fade-up-right">
-          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <path
-              fill="#9AAAE3"
-              d="M54.2,-67.2C69.4,-63.5,80.4,-46.6,84.6,-28.7C88.7,-10.8,86,8.1,76.8,21.4C67.6,34.7,51.9,42.3,38.1,50.3C24.2,58.3,12.1,66.7,-2.8,70.5C-17.7,74.3,-35.3,73.6,-45.6,64.5C-55.9,55.3,-58.8,37.7,-63.3,21.2C-67.7,4.7,-73.7,-10.6,-71.8,-25.4C-69.8,-40.2,-59.9,-54.5,-46.6,-58.9C-33.3,-63.2,-16.7,-57.6,1.4,-59.6C19.5,-61.5,39,-71,54.2,-67.2Z"
-              transform="translate(100 100)"
-            />
-          </svg>
+    </div>
+    <!-- faq end -->
+    <div id="support"></div>
+    <!-- support server -->
+    <div class="wrapper reveal">
+        <div class="title">
+            <div class="th1">
+                <h1>Fidelia's Personal Discord Server</h1>
+            </div>
+            <center>
+                <div class="thr">
+                    <hr>
+                </div>
+            </center>
         </div>
+        <!-- replace with your server widget and make the width 100% -->
+        <iframe src="https://discord.com/widget?id=990567969971138580&theme=dark" width="100%" height="600"
+            allowtransparency="true" frameborder="0"
+            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+    </div>
+    <!-- support server end -->
+    <div class="curve">
+        <svg xmlns=" http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill-opacity="1"
+                d="M0,192L48,176C96,160,192,128,288,133.3C384,139,480,181,576,202.7C672,224,768,224,864,224C960,224,1056,224,1152,234.7C1248,245,1344,267,1392,277.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+            </path>
+        </svg>
+    </div>
 
-        <div class="columns mt-6">
-          <div class="column" data-aos="fade-right">
-            <img
-              class="image has-image-centered"
-              src="assets/img/music.svg"
-              alt="feature1 img"
-              style="width: 20rem;"
-            />
-          </div>
-          <div class="column">
-            <h4 class="title">Feature <span class="has-text-info">#4</span></h4>
-            <p class="subtitle mt-3">
-              Comming Soon...
-            </p>
-          </div>
+    <!-- footer -->
+    <footer>
+
+        <div class="wrapper">
+            <div class="foot">
+                <h1>Fidelia Bot</h1>
+                <h4>Website created & designed by <a href="https://facebook.com/DavidGlitchDev">DavidGlitch04</a></h4>
+            </div>
         </div>
-      </div>
-      <!-- single feature end (Right) -->
-    </section>
-    <!-- Features Section End -->
-
-    <!-- Stats Section Start -->
-    <section id="stats" class="section mt-6">
-      <div class="has-text-centered">
-        <h1 class="title lined">Stats</h1>
-        <div class="line line-center blurple"></div>
-      </div>
-
-      <div class="columns mt-6">
-        <div class="column has-text-centered">
-          <p class="title has-text-weight-bold lined">001</p>
-          <span class="subtitle has-text-weight-bold blurple"><i class="fa-solid fa-server"></i> Servers</span>
-        </div>
-
-        <div class="column has-text-centered">
-          <p class="title has-text-weight-bold lined">002</p>
-          <span class="subtitle has-text-weight-bold blurple"><i class="fa-solid fa-terminal"></i> Commands</span>
-        </div>
-
-        <div class="column has-text-centered">
-          <p class="title has-text-weight-bold lined">008</p>
-          <span class="subtitle has-text-weight-bold blurple"><i class="fa-solid fa-users"></i> Users</span>
-        </div>
-      </div>
-    </section>
-    <!-- Stats Section End -->
-
-
-    <!-- Footer Section Start -->
-    <footer class="footer bg-base">
-      <div class="content has-text-centered has-text-white">
-        <div class="mb-2">
-          <a href="#" class="has-text-white" target="_blank">
-            <i class="fa-brands fa-discord"></i>
-          </a>
-          &nbsp; &nbsp;
-          <a href="#" class="has-text-white" target="_blank">
-            <i class="fa-brands fa-github"></i>
-          </a>
-        </div>
-
-        <p>
-          <span class="has-text-weight-bold">David Assistant</span>
-          <br />
-          &copy; <span id="cp-year"></span> Copyright DavidGlitch04. All Rights
-          Reserved.
-        </p>
-
-        <p style="letter-spacing: 0.1em;" class="is-uppercase">
-          Website Edit By
-          <a
-            href="https://github.com/DavidGlitch04"
-            class="blurple has-text-weight-bold"
-            target="_blank"
-            >DavidGlitch04</a
-          >.
-        </p>
-      </div>
     </footer>
-    <!-- Footer Section End -->
+    <!-- footer end -->
+    <script src="main.js"></script>
+    <script src="commands.js"></script>
+    <script src="https://code.iconify.design/1/1.0.4/iconify.min.js">   </script>
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+</body>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://unpkg.com/@popperjs/core@2"></script>
-    <script src="https://unpkg.com/tippy.js@6"></script>
-    <script src="assets/js/script.js"></script>
-  </body>
+
 </html>
